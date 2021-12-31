@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+  
+   
+</head>
+<body>
+    <div class="titulo">
+        <H1> Ayuda el crud sirve pero no guarda en local</H1>
+        <p>Cosas pendientes para ponerle al crud</p>
+    </div>
+    <div class="form">
+<!-- para evitar que la página se recargue y mantener el estándar HTML,atributo ,
+llama una funcion  -->
+<form autocomplete="off" action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+<!-- escribe un texto en el text-box hasta que le ponga algo  -->
+<input type="text" id="Agregar-todo" placeholder="Escriba algo plz">
+<!-- entrada , tipo entrega , boton agregar  -->
+<input type="submit" value="Add" class="btn btn-primary">
+</form>
+<!-- parrafo, contador  -->
+<p>Tienes: </p>
+<p id="contador"></p>
+
+<table>
+    <!-- tabla, columna del parrafo , clase to-do,   -->
+    <tr class="to-do">
+        <th> <h3>El que hacer:</h3> </th>
+    </tr>
+    <!-- columna , tareas   -->
+    <tbody id="tasks">
+    </tbody>
+</table>
+
+    </div>
+<!-- esto se va a ocultar despues   -->
+<div id="caja-editable" role="aria-hidden">
+    <form action="javascript:void(0);" method="POST" id="save-edit">
+      <input type="text" id="edit-todo">
+      <input type="submit" value="Save" class="btn btn-success"/> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+    </form>
+  </div>
+    
+    <script src="java.js"></script>
+</body>
+</html>
